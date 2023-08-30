@@ -1,9 +1,13 @@
 const express = require('express');
+const cors = require('cors');  // Importez le module cors
 const app = express();
-const port = 5050
+const port = "5000"
 
-// Middleware pour traiter les données JSON
+// Middleware pour gérer les données JSON
 app.use(express.json());
+
+// Utilisez le middleware cors pour gérer les CORS
+app.use(cors());
 
 // Import du routeur
 const router = require('./routers/router');
